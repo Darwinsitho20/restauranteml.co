@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú - Restaurante Pacífico</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Título del restaurante */
+    .restaurant-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-style: italic;
+      color: brown;
+      margin-top: 20px;
+    }
+
+    /* Estilo para los iconos de redes sociales */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%; /* Círculo */
+      background-color: white; /* Fondo blanco */
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    /* Estilo para el cuadro de contacto semiredondo */
+    .contact-box {
+      margin-top: 10px; 
+      background-color: white;
+      color: black;
+      padding: 20px;
+      border-radius: 0 0 25px 25px; 
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    /* Contenedor de platos */
+    .menu-container {
+      width: 30%; 
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Lista de platos */
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #333;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.1);
+    }
+
+    .menu-item .price {
+      text-align: right;
+      font-size: 1rem;
+      color: lightgray;
+    }
+
+    /* Enlaces sin subrayado */
+    .menu-item a {
+      text-decoration: none; /* Quitar subrayado */
+      color: white; /* Color del texto */
+    }
+
+    /* Contenedor de imágenes en una cuadrícula */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 15px;
+      padding: 20px;
+      width: 70%; 
+      box-sizing: border-box;
+    }
+
+    /* Cuadro de imagen semiredondo */
+    .image-box {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      transition: transform 0.3s ease;
+    }
+
+    .image-box:hover {
+      transform: scale(1.1);
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .menu-container {
+        width: 100%;
+      }
+
+      .image-grid {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .image-box img {
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="restaurant-title">Restaurante ML Sabores del Pacífico</h1>
+
+  <!-- Iconos de redes sociales debajo del título -->
+  <div class="social-icons">
+    <a href="https://www.facebook.com/" target="_blank">
+      <img src="https://store-images.s-microsoft.com/image/apps.37935.9007199266245907.b029bd80-381a-4869-854f-bac6f359c5c9.91f8693c-c75b-4050-a796-63e1314d18c9" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/" target="_blank">
+      <img src="https://www.enriquedans.com/wp-content/uploads/2019/07/TikTok-logo.jpg" alt="TikTok">
+    </a>
+    <a href="https://www.whatsapp.com/" target="_blank">
+      <img src="https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN" alt="WhatsApp">
+    </a>
+  </div>
+
+  <!-- Cuadro semiredondo para contacto -->
+  <div class="contact-box">
+    <p><strong>Contacto:</strong> Calle 1, Centro, Buenaventura</p>
+    <p><strong>Teléfono:</strong> +57 312 3456789</p>
+    <p><strong>Email:</strong> restaurante@mlsaborespacifico.com</p>
+  </div>
+
+  <div class="menu-container">
+    <div class="menu-item">
+        <a href="pago.html">
+        <span>Arroz Atollado</span>
+        <span class="price">$20,000 COP / $5.50 USD</span>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="pago.html">
+        <span>Tamal de Piangua</span>
+        <span class="price">$18,000 COP / $4.90 USD</span>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="pago.html">
+        <span>Tapao de Pescado</span>
+        <span class="price">$25,000 COP / $6.80 USD</span>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="pago.html">
+        <span>Empanadas de Camarón</span>
+        <span class="price">$15,000 COP / $4.00 USD</span>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="pago.html">
+        <span>Sancocho de Pargo</span>
+        <span class="price">$22,000 COP / $6.00 USD</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="image-grid">
+    <div class="image-box">
+      <img src="https://i0.wp.com/asomecosafro.com.co/wp-content/uploads/2021/09/encocado-jaiba-scaled.jpg?fit=2560%2C1920&ssl=1" alt="Arroz Atollado">
+    </div>
+    <div class="image-box">
+      <img src="https://www.recetasnestle.com.co/sites/default/files/inline-images/Recetas_2_-Mojarra-con-ensalada-de-aguacate%2C-arroz-con-coco%2C-pla%CC%81tano-y-limo%CC%81n_1200x500.jpeg" alt="Tapao de Pescado">
+    </div>
+    <div class="image-box">
+      <img src="https://www.recetasnestle.com.co/sites/default/files/inline-images/Recetas_2_sancocho-de-pescado-platos-ti%CC%81picos-de-la-regio%CC%81n-pacifica_1200x500.jpg" alt="Sancocho de Pargo">
+    </div>
+    <div class="image-box">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvStd-cdY9EAyH8PCDVQKUE9khjv7nOwv85jPVOw-O0-orUYsYTnek2YDCL0lbYzaLd2Z85oCDlFkP40sGJq8q9bSBacZK6RV2BJh0K0zy7SBkWhKD9KnEpXOqWYu5GG0rlhdbWjHGX8c/s1600/cocina-pacifico.jpg" alt="Ceviche de Pescado">
+    </div>
+    <div class="image-box">
+      <img src="https://agendadelmar.com/wp-content/uploads/2022/02/tamalpiangua3.jpg" alt="Camarones al Ajillo">
+    </div>
+    <div class="image-box">
+      <img src="https://www.recetavenezolana.com/wp-content/uploads/2019/11/Sancocho-de-Pargo.jpg" alt="Ceviche de Pescado">
+    </div>
+    <div class="image-box">
+      <img src="https://truffle-assets.tastemadecontent.net/1t1bxm43v4e3_6XFLN79w7CUUCqaukAS0U0_empanadas-de-camaron-y-queso_landscapeThumbnail_es.jpeg" alt="Tamal de Piangua">
+    </div>
+    <div class="image-box">
+        <img src="https://ombligoparao.cl/wp-content/uploads/2023/03/Receta-de-Cocadas.jpg" alt="Tamal de Piangua">
+    </div>
+    <div class="image-box">
+        <img src="https://colombiavisible.com/wp-content/uploads/2022/08/tapao-pacifico-1024x576.jpg" alt="Tamal de Piangua">
+    </div>
+  </div>
+
+</body>
+</html>

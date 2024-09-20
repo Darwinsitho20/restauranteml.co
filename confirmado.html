@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado de Compra</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .status-icon {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 5px solid white;
+            margin-bottom: 20px;
+        }
+
+        .status-icon.success {
+            border-color: green;
+        }
+
+        .status-icon.error {
+            border-color: red;
+        }
+
+        .status-icon .icon {
+            font-size: 48px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="message" class="message"></div>
+    <div id="status-icon" class="status-icon">
+        <span id="icon" class="icon"></span>
+    </div>
+
+    <script>
+        // Cambia el valor de esta variable para probar los diferentes estados
+        var status = "success"; // O "error" para el estado de error
+
+        var messageElement = document.getElementById("message");
+        var iconElement = document.getElementById("icon");
+        var statusIconElement = document.getElementById("status-icon");
+
+        if (status === "success") {
+            messageElement.textContent = "Tu compra fue exitosa";
+            statusIconElement.classList.add("success");
+            iconElement.textContent = "✔";
+        } else if (status === "error") {
+            messageElement.textContent = "Tu compra no fue exitosa";
+            statusIconElement.classList.add("error");
+            iconElement.textContent = "✘";
+        }
+    </script>
+
+</body>
+</html>
