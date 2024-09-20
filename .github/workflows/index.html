@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante Pacífico</title>
+  <style>
+    /* Estilos generales */
+    body {
+      background-color: black;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+    }
+
+    /* Contenedor principal */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Título del restaurante */
+    .restaurant-title {
+      font-size: 2.5rem;
+      color: brown;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    /* Sección de imágenes */
+    .image-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .image-frame {
+      border-radius: 20px;
+      overflow: hidden;
+      width: 150px;
+      height: 150px;
+      transition: transform 0.3s ease;
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .image-frame:hover {
+      transform: scale(1.1) rotateX(10deg) rotateY(10deg);
+    }
+
+    /* Logo del restaurante */
+    .logo-container {
+      margin-bottom: 20px;
+    }
+
+    .logo-image {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    /* Botón "Ver Menú" */
+    .menu-button-container {
+      margin-bottom: 40px;
+    }
+
+    .menu-button {
+      background-color: brown;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-button:hover {
+      transform: scale(1.1) rotateX(5deg) rotateY(5deg);
+    }
+
+    /* Cuadro de ubicación GPS */
+    .location-box {
+      background-color: lightgreen;
+      padding: 5px 10px;
+      border-radius: 20px;
+      color: black;
+      font-weight: bold;
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .location-box:hover {
+      transform: scale(1.1) rotateX(5deg) rotateY(5deg);
+    }
+
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+      /* Adaptación para tabletas y móviles */
+      .restaurant-title {
+        font-size: 2rem;
+      }
+
+      .image-frame {
+        width: 100px;
+        height: 100px;
+      }
+
+      .menu-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+      }
+
+      .logo-image {
+        width: 100px;
+        height: 100px;
+      }
+
+      .location-box {
+        font-size: 0.7rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      /* Adaptación para pantallas pequeñas */
+      body {
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      .image-frame {
+        width: 80px;
+        height: 80px;
+      }
+
+      .restaurant-title {
+        font-size: 1.8rem;
+      }
+
+      .menu-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+      }
+
+      .logo-image {
+        width: 80px;
+        height: 80px;
+      }
+
+      .location-box {
+        font-size: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Título del restaurante -->
+    <h1 class="restaurant-title">Restaurante ML Sabores del Pacífico</h1>
+    
+    <!-- Sección de imágenes -->
+    <div class="image-section">
+      <div class="image-frame"><img src="https://www.sitiosturisticoscolombia.com/wp-content/uploads/arroz-atollado.jpg" alt="Comida 1"></div>
+      <div class="image-frame"><img src="https://colombiavisible.com/wp-content/uploads/2022/08/tapao-pacifico-1024x576.jpg" alt="Comida 2"></div>
+      <div class="image-frame"><img src="https://casabalae.com/wp-content/uploads/2024/05/Casa-Balae-Blog-Gastronomia-del-Pacifico-Colombiano.jpg" alt="Comida 3"></div>
+      <div class="image-frame"><img src="https://www.institucionalcolombia.com/wp-content/uploads/2021/10/plato-camaroes.jpg" alt="Comida 4"></div>
+      <div class="image-frame"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvStd-cdY9EAyH8PCDVQKUE9khjv7nOwv85jPVOw-O0-orUYsYTnek2YDCL0lbYzaLd2Z85oCDlFkP40sGJq8q9bSBacZK6RV2BJh0K0zy7SBkWhKD9KnEpXOqWYu5GG0rlhdbWjHGX8c/s1600/cocina-pacifico.jpg" alt="Comida 5"></div>
+    </div>
+    
+    <!-- Logo del restaurante -->
+    <div class="logo-container">
+      <img src="c:\Users\myuli\Downloads\IMG-20240919-WA0041.jpg" alt="Logo del Restaurante" class="logo-image">
+    </div>
+
+    <!-- Botón "Ver Menú" con enlace -->
+    <div class="menu-button-container">
+      <a href="vermenu.html"><button class="menu-button">Ver Menú</button></a>
+    </div>
+
+    <!-- Ubicación GPS -->
+    <div class="location-box">
+      <p>Buenaventura, Colombia</p>
+    </div>
+  </div>
+</body>
+</html>
